@@ -1,0 +1,497 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* --background-color: #FFFFFF; */
+    --sliderRed: #c7363d;
+    --navigationSilver: #CCCCCC;
+}
+  
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+}
+
+@media only screen and (min-width: 768px) {
+    .container {
+        width: 768px;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .container {
+        width: 1024px;
+    }
+}
+
+@media only screen and (min-width: 1280px) {
+    .container {
+        width: 1280px;
+    }
+}
+
+/* ------------------------------------------ HEADER ------------------------------------------ */
+
+/* ------------- NAVIGACIJA ----------------- */
+
+/* gornji deo navigacije */
+.topNav { 
+    margin-top: 25px;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    margin-left: 20px;
+    width: 212px;
+    height: 64px;
+}
+
+.logo > img{
+    width: 212px;
+    height: 64px;
+}
+
+@media only screen and (max-width: 1024px) {
+    .rightCorn {
+        display: flex;
+        align-items: center;
+    }
+}
+
+.socialAndLang {
+    display: none;
+}
+
+.rightCorn > .searchbox {
+    display: none;
+}
+
+.hamburgerIcon {
+    display: block;
+    width: 50px;
+    height: 50px;
+    margin-right: 20px;
+    /* background-color: green; */
+}
+
+
+/* sama navigacija */
+
+nav > .container > ul {
+    position: absolute;
+    list-style-type: none;
+    width: 100%;
+    height: 101%;
+    left: -110%;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    -webkit-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    z-index: 999;
+}
+
+nav > .container > ul > a > li{
+    padding: 20px 20px 21px 20px;
+    font-size: 21px;
+    height: 60px;
+    text-align: center;
+    /* background-color: yellow; */
+}
+
+nav > .container > ul > a:link, nav > .container > ul > a:visited{
+    text-decoration: none;
+    color: black;
+}
+
+@media only screen and (min-width: 768px) {
+    .logo {
+        margin-left: 0px;
+        width: 318px;
+        height: 96px;
+    }
+    
+    .logo > img{
+        width: 318px;
+        height: 96px;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .hamburgerIcon {
+        display: none;
+    }
+
+    .socialAndLang {
+        display: block;
+        width: 360px;
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .socialAndLang > .social > img {
+        height: 30px;
+    }
+    
+    .socialAndLang > .lang > span {
+        font-size: 12px;
+        font-weight: bold;
+        color: #0C71C3;
+    }
+    
+    .vl {
+        display: inline;
+        margin: 0 5px;
+        border-left: 2px solid green;
+        height: 10px;
+    }
+    
+    .rightCorn > .searchbox{
+        display: block;
+        margin-top: 10px;
+        width: 380px;
+        height: 38px;
+        border-radius: 40px;
+        background-color: #CCCCCC;
+    }
+
+    nav > .container > ul {
+        position: static;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        border-top: 2px solid #CCCCCC;
+        border-bottom: 2px solid #CCCCCC;
+        list-style-type: none;
+        box-shadow: none;
+    }
+}
+
+
+
+
+/* ------------------------------------------ MAIN ---------------------------------------------- */
+
+
+/* ======================================================================================================================== 
+                                            =====================================       
+                                                        SLIDER
+                                            =====================================
+
+
+                                               ==========================
+                                                    SABLON U HTML-u
+                                               ==========================
+                                               
+                                                sliderContainer naziv
+                                                    slider naziv
+                                                        slider-items naziv
+                                                            sliderItem naziv
+
+
+
+
+                                               ==========================
+                                                MINIMUM ZA POPUNJAVANJE
+                                               ==========================
+
+                                                .sliderContainer.naziv {
+
+                                                }
+
+                                                mora biti popunjeno: 
+                                                .slider.naziv {
+                                                    height:
+                                                }
+
+                                                .slider-items.naziv {
+                                                    ovo je ukupna sirina
+                                                    width: calc(broj-slajdova * (sirina-slajda + razmak-izmedju-slajdova);
+                                                }
+
+                                                .sliderItem.naziv {
+                                                    ovo je pojedinacna sirina
+                                                    width: 600px;
+                                                    background-color:
+                                                } 
+
+                                            
+
+============================================================================================================================ */
+
+/* OSNOVA SVAKOG SLIDERA */
+.sliderContainer {
+    
+}
+
+.slider {
+    position: relative;
+    width: inherit;    
+    overflow: scroll;
+}
+
+.slider-items {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    height: inherit;
+}
+
+.sliderItem {
+
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.slider::-webkit-scrollbar {
+    display: none;
+}
+  
+/* Hide scrollbar for IE, Edge and Firefox */
+.slider {
+     -ms-overflow-style: none; /* IE and Edge */
+     scrollbar-width: none; /*Firefox */
+}
+
+.progress {
+    position: absolute;
+    margin-top: 2px;
+    width: 100%;
+    /* background-color: aqua; */
+    display: flex;
+    justify-content: center;
+}
+
+.progressOne {
+
+}
+
+.progressCenter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* sirina se mora namestit i za telefon i racunar posebno */
+    width: 50%;
+    height: 20px;
+    /* background-color: blue; */
+}
+
+.progressSlide {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    /* border: 3px solid #CCCCCC; */
+    background-color: #CCCCCC;
+    transition-timing-function: linear;
+}
+
+.activeS {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 3px solid #CCCCCC;
+    background-color: white;
+}
+
+.sliderContainer > .sliderNav > .sliderButton:hover {
+    background-color: var(--sliderRed);
+}
+
+.sliderContainer > .sliderNav {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    border: 2px solid #CCCCCC;
+}
+
+.noselect {
+    -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Safari */
+       -khtml-user-select: none; /* Konqueror HTML */
+         -moz-user-select: none; /* Old versions of Firefox */
+          -ms-user-select: none; /* Internet Explorer/Edge */
+              user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome, Edge, Opera and Firefox */
+}
+
+/* ========================================================= */
+/* ZASEBNA PODESAVANJA SLIDERA  */
+
+
+
+/* bigSlider  */
+.sliderContainer.bigSlider {
+    position: relative;
+    margin-top: 25px;
+    margin-bottom: 60px;
+}
+
+.slider.bigSlider {
+    height: 620px;
+}
+
+.slider-items.bigSlider {
+    width: calc( 5 * 100%);
+    justify-content: space-between;
+}
+
+.sliderItem.bigSlider {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.sliderItem.bigSlider > .sliderText {
+    width: 100%;
+    padding: 15px;
+    padding-top: 20px;
+}
+
+.sliderItem.bigSlider > .sliderText > h1 {
+    margin-bottom: 20px;
+    font-size: 35px;
+}
+
+.sliderItem.bigSlider > .sliderText > h1 a:link, .sliderItem.bigSlider > .sliderText > h1 a:visited{
+    text-decoration: none;
+    color: var(--sliderRed);
+    transition: 0.5s ease;
+}
+
+.sliderItem.bigSlider > .sliderText > h1 a:hover {
+    color: black;
+} 
+
+.sliderItem.bigSlider > .sliderText > p {
+    font-size: 18px;
+}
+
+.sliderItem.bigSlider > .sliderText > h3 {
+    margin-top: 20px;
+    font-size: 13px;
+}
+
+.sliderItem.bigSlider > .sliderPhoto {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+}
+.sliderItem.bigSlider > .sliderPhoto > .sliderPhotoPlace {
+    width: 360px;
+    overflow: hidden;
+}
+
+.sliderItem.bigSlider > .sliderPhoto > .sliderPhotoPlace > img {
+    width: 100%;
+}
+
+@media only screen and (min-width: 480px) {
+    .sliderItem.bigSlider > .sliderPhoto > .sliderPhotoPlace {
+        width: 480px;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .slider-items.bigSlider {
+        width: calc(5 * 768px);
+    }
+    
+    .sliderItem.bigSlider {
+        width: 768px;
+    }
+
+    .sliderItem.bigSlider > .sliderPhoto > .sliderPhotoPlace {
+        width: 768px;
+    }
+}
+    
+@media only screen and (min-width: 1024px) {
+    .slider.bigSlider {
+        height: 450px;
+    }
+
+    .slider-items.bigSlider {
+        width: calc(5 * 1024px);
+    }
+    
+    .sliderItem.bigSlider {
+        width: 1024px;
+        flex-direction: row;
+    }
+
+    .sliderItem.bigSlider > .sliderText {
+        width: 40%;
+        height: inherit;
+    }
+
+    .sliderItem.bigSlider > .sliderPhoto {
+        width: 60%;
+    }
+
+    .sliderItem.bigSlider > .sliderPhoto > .sliderPhotoPlace {
+        width: 95%;
+        height: 400px;
+        box-shadow: 10px 10px #CCCCCC;
+    }
+
+    .sliderItem.bigSlider > .sliderPhoto > .sliderPhotoPlace > img {
+        height: 100%;
+        width: auto;
+    }
+}
+    
+@media only screen and (min-width: 1280px) {
+    .slider-items.bigSlider {
+        width: calc(5 * 1280px);
+    }
+    
+    .sliderItem.bigSlider {
+        width: 1280px;
+    }
+}
+    
+
+/* ================== */
+.sliderContainer.proba {
+    position: relative;
+    margin-top: 25px;
+}
+
+.slider.proba {
+    height: 500px;
+}
+
+.slider-items.proba {
+    background-color: yellow;
+    width: 700%;
+    justify-content: space-between;
+    transition: all 1s ease-in-out;
+}
+
+.sliderItem.proba {
+    width: 100%;
+    background-color: rgba(250, 44, 44, 0.747);
+}
+
+/* .sliderContainer.proba > .sliderNav {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    border: 2px solid #CCCCCC;
+} */
+
+.sliderContainer.proba > .sliderNav > .sliderButton:hover {
+    background-color: red;
+}
+
+.sliderItem.proba:nth-child(odd){
+    background-color: green;
+}
+
